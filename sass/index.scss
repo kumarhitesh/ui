@@ -1,0 +1,310 @@
+$red: red;
+
+.banner-container {
+  position: relative;
+  height: 500px;
+  padding: 0px !important;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    .background {
+      width: 50%;
+      height: 100%;
+      float: left;
+
+      &:nth-of-type(1) {
+        background: url("https://images.pexels.com/photos/1092364/pexels-photo-1092364.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &:nth-of-type(2) {
+        background: url("http://careerlink.com/lp/wp-content/uploads/2015/10/13134020174_5246cb94b7.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .content {
+    .banner-title {
+      width: 35%;
+      font-weight: bold;
+
+      span {
+        display: block;
+        font-size: 16px;
+        font-weight: normal;
+        color: #7f7f7f;
+      }
+    }
+
+    p {
+      width: 35%;
+    }
+
+    .search-box-container {
+      display: flex;
+      background: white;
+      align-items: center;
+      padding: 9px;
+      color: #929292;
+      justify-content: center;
+      border-radius: 12px;
+
+      .fa {
+        margin-right: 8px;
+        margin-left: 4px;
+      }
+
+      input {
+        margin-right: 8px;
+        margin-left: 4px;
+        border: 0px;
+        outline: none;
+        font-size: 18px;
+        width: 100%;
+      }
+
+      .search-button {
+        margin-left: auto;
+        margin-right: 0px;
+        padding: 14px 20px !important;
+        border-radius: 6px !important;
+      }
+    }
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+  }
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .section-title {
+    text-transform: capitalize;
+    position: relative;
+    display: inline;
+
+    &:after {
+      position: absolute;
+      width: 40px;
+      height: 4px;
+      content: "";
+      background: blue;
+      top: 50%;
+      right: -55px;
+    }
+  }
+
+  .description {
+    &:first-of-type {
+      padding-top: 50px;
+    }
+  }
+
+  &.parallax {
+    background: url("https://img.us.news.samsung.com/us/wp-content/uploads/2016/02/02194550/Student-group-shot-with-LFD.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+      top: 0%;
+      left: 0%;
+      z-index: -1;
+    }
+
+    .section-title {
+      color: white;
+    }
+
+    .description {
+      color: #cec9c9;
+      width: 60%;
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+  }
+
+  .tab-container {
+    position: relative;
+    max-width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 4px dotted #d6d3d3;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .tab-content {
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
+      background: #d6d3d3;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      li.nav-item {
+        display: inline-table;
+        position: absolute;
+
+        &:nth-of-type(1) {
+          left: 40%;
+          top: -8%;
+        }
+        &:nth-of-type(2) {
+          top: 40%;
+          right: -8%;
+        } &:nth-of-type(3) {
+          left: 40%;
+          bottom: -8%;
+        } &:nth-of-type(4) {
+          top: 40%;
+          left: -8%;
+        } &:nth-of-type(5) {
+          right: 6%;
+          top: 8%;
+        } &:nth-of-type(6) {
+          top: 75%;
+          right: 0%;
+        } &:nth-of-type(7) {
+          top: 75%;
+          left: 0%;
+        }
+        &:nth-of-type(8) {
+          left: 2%;
+          top: 10%;
+        }
+      }
+    }
+  }
+}
+
+img {
+  height: 80%;
+  width: 80%;
+}
+
+.text-center {
+  text-align: center;
+
+  .section-title {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.text-right {
+  text-align: center;
+}
+
+.btn {
+  margin: 0px 20px;
+  border-radius: 18px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  text-transform: capitalize;
+  padding: 4px 18px !important;
+  outline: none;
+
+  &.btn-primary {
+    background: blue;
+
+    &:hover {
+      background: blue;
+      color: white;
+    }
+
+    &:focus {
+      background: blue;
+      color: white;
+    }
+  }
+
+  &.btn-light {
+    color: blue;
+
+    &:hover {
+      background: white;
+      color: blue;
+    }
+
+    &:focus {
+      background: white;
+      color: blue;
+    }
+  }
+}
+
+p {
+  color: #7f7f7f;
+}
+
+.container {
+  width: 65% !important;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    .banner {
+      .background {
+        width: 100%;
+
+        &:nth-of-type(2) {
+          display: none;
+        }
+      }
+    }
+
+    .content {
+      .banner-title {
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
