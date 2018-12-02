@@ -330,11 +330,11 @@ p {
     font-size: 14px;
     padding-bottom: 4px;
     font-weight: normal;
-    color: #7f7f7fa6;
+    color: #7f7f7f;
     font-weight: 500; }
 
 .footer-section .container {
-  border-top: 1px solid #7f7f7fa6;
+  border-top: 1px solid #7f7f7f;
   padding-top: 20px; }
   .footer-section .container img {
     width: 100px; }
@@ -355,6 +355,60 @@ p {
   font-size: 11px;
   opacity: 0.6; }
 
+#loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 69, 255, 0.95);
+  z-index: 999;
+  top: 0px;
+  left: 0px;
+  /* Add animation to "page content" */ }
+  #loader-container .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #0045ff;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite; }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  #loader-container .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s; }
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0; }
+  to {
+    bottom: 0px;
+    opacity: 1; } }
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
 @media (max-width: 1200px) {
   .container {
     width: 100% !important; } }
@@ -367,5 +421,22 @@ p {
     width: 100%; }
   .banner-container .content p {
     width: 100%; } }
+@media (max-width: 425px) {
+  .section .tab-container {
+    height: 365px; } }
+@media (max-width: 375px) {
+  .section .tab-container {
+    height: 315px; }
+    .section .tab-container .tab-content.parallax .service-title {
+      font-size: 18px; } }
+@media (max-width: 320px) {
+  .section .tab-container {
+    height: 260px; }
+    .section .tab-container .tab-content.parallax .service-title {
+      font-size: 14px; }
+    .section .tab-container .tab-content.parallax .description {
+      font-size: 11px; }
+    .section .tab-container .tab-content.parallax .more-link {
+      font-size: 11px; } }
 
 /*# sourceMappingURL=index.css.map */
